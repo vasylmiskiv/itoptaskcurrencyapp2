@@ -1,0 +1,47 @@
+<div class="currency-section">
+  <form class="currency-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="firstAmount"
+        name="firstAmount"
+        (input)="onFirstAmount()"
+      />
+    </mat-form-field>
+
+      <select
+        [(ngModel)]="firstCurrency"
+        (change)="firstCurrencyOnChange($event)"
+      >
+        <option
+          *ngFor="let option of currencyOptions"
+
+        >
+          {{ option }}
+        </option>
+      </select>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="secondAmount"
+        name="secondAmount"
+        (input)="onSecondAmount()"
+      />
+    </mat-form-field>
+
+      <select
+        [(ngModel)]="secondCurrency"
+        (change)="secondCurrencyOnChange($event)"
+      >
+        <option *ngFor="let option of currencyOptions">
+          {{ option }}
+        </option>
+      </select>
+
+  </form>
+</div>
