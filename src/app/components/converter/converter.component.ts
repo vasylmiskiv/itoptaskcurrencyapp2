@@ -10,7 +10,7 @@ import { CurrencyService } from 'src/app/services/currency.service';
 export class ConverterComponent implements OnInit {
   currencyOptions = ['UAH', 'USD', 'EUR', 'CAD', 'GBP'];
 
-  firstCurrency: string = 'USD';
+  firstCurrency: string = 'UAH';
   secondCurrency: string = 'UAH';
 
   difference!: number;
@@ -52,7 +52,7 @@ export class ConverterComponent implements OnInit {
     this.secondAmount = (
       Number(this.firstAmount) * Number(this.difference)
     ).toFixed(2);
-    console.log(this.secondAmount);
+    console.log(this.firstCurrency);
   }
 
   onSecondAmount() {

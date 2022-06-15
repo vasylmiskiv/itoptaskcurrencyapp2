@@ -1,13 +1,38 @@
 .currency-section {
-  padding: 200px 0;
+  margin: auto;
+  margin-top: 80px;
+  font-size: 16px;
 }
 
 .currency-form {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  margin: auto;
   background: #ffffff;
-  padding: 50px;
-  border-radius: 5px;
+  padding: 50px 16px;
 }
+
+.currency-select {
+  padding: 16px 10px;
+  background-color: #F5F5F5;
+  border: none;
+  border-bottom: 1px solid #727272;
+  outline: none;
+  text-indent: 5px;
+  font-size: 1em;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+
+  &-1 {
+    border-bottom: 1px solid #c0c0c0;
+    padding-bottom: 30px;
+  }
+
+  &-2 {
+    margin-top: 30px;
+  }
+
+}
+

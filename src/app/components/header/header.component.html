@@ -1,3 +1,10 @@
-<div class ="header" *ngFor="let currency of currencyRates | keyvalue">
-  {{currency.key}} / {{currency.value}}
+<div class="header">
+  <div class="container">
+    <div class="header-article">Currency app</div>
+    <div>
+      <div *ngFor="let currency of currencyRates | keyvalue">
+        {{ currency.key }} / {{ mainCurrency }}: {{ currency.value }}
+      </div>
+    </div>
+  </div>
 </div>

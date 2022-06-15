@@ -1,47 +1,53 @@
 <div class="currency-section">
   <form class="currency-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Amount</mat-label>
-      <input
-        type="number"
-        matInput
-        [(ngModel)]="firstAmount"
-        name="firstAmount"
-        (input)="onFirstAmount()"
-      />
-    </mat-form-field>
+    <div class="form-control form-control-1">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input
+          type="number"
+          matInput
+          [(ngModel)]="firstAmount"
+          name="firstAmount"
+          (input)="onFirstAmount()"
+          min="0"
+        />
+      </mat-form-field>
 
+      <label for="currency-1">Currency 1</label>
       <select
-        [(ngModel)]="firstCurrency"
+        class="currency-select"
         (change)="firstCurrencyOnChange($event)"
+        id="currency-1"
       >
-        <option
-          *ngFor="let option of currencyOptions"
-
-        >
+        <option *ngFor="let option of currencyOptions">
           {{ option }}
         </option>
       </select>
+    </div>
 
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Amount</mat-label>
-      <input
-        type="number"
-        matInput
-        [(ngModel)]="secondAmount"
-        name="secondAmount"
-        (input)="onSecondAmount()"
-      />
-    </mat-form-field>
+    <div class="form-control form-control-2">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input
+          type="number"
+          matInput
+          [(ngModel)]="secondAmount"
+          name="secondAmount"
+          (input)="onSecondAmount()"
+          min="0"
+        />
+      </mat-form-field>
 
+      <label for="currency-2">Currency 2</label>
       <select
-        [(ngModel)]="secondCurrency"
+        id="currency-2"
+        class="currency-select"
         (change)="secondCurrencyOnChange($event)"
       >
         <option *ngFor="let option of currencyOptions">
           {{ option }}
         </option>
       </select>
-
+    </div>
   </form>
 </div>
